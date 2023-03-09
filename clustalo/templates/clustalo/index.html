@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      // Check if there are any form errors
+      if ($('ul.errorlist').length) {
+        // Scroll to the top of the error message
+        $('html, body').animate({
+          scrollTop: $('ul.errorlist').offset().top
+        }, 1000);
+      }
+    });
+    </script>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUSTALO Main Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {background-color: #f2f2f2; font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;}
+        h3 {font-size: 1.5em; color: #7278ad; margin-top: 20px;text-align: center;}
+        h1, h2 {display: inline;}
+        ul.errorlist {color: red;text-align: center;}
+        h1 {color: #fff; font-size: 3.5em;}
+        h2 {color: #7278ad;font-size: 4.5em;}
+        form {margin-top: 20px; margin-bottom: 20px;text-align: center;}
+        input[type="submit"] {background-color: #7278ad; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; font-size: 1.1em; cursor: pointer;}
+        input[type="submit"]:hover {background-color: #323657;}
+        .box-out {border: 2px solid #72ada6; border-radius: 10px; padding: 20px;margin: 0 auto; width: 50%; text-align: center;}
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0e1c1e; 
+                color: #3a989d;
+            }
+            input[type="submit"] {
+                background-color: #497a85; 
+                color: #fff;
+            }
+            .box-out {
+                border: 2px solid #78a59d;
+            }
+        }
+        input[type="file"] {
+        display: block;
+        margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>WELCOME TO</h1><h2>CLUSTAL</h2>
+    <p>Clustal Omega is a new multiple sequence alignment program that uses seeded guide trees and HMM profile-profile techniques to generate alignments between three or more sequences.</p>        <hr>
+    <h3>INPUT SEQUENCES TO ALIGN</h3>
+    <form method="post">{% csrf_token %}
+        {{ form_SequencesForm.as_p }}
+        <input type="submit" name="form_SequencesForm" value="Align Sequences">
+    </form>
+    <hr>
+    <h3>INPUT UniProtIDs</h3>
+    <form method="post">{% csrf_token %}
+        {{ form_uniprotIdForm.as_p }}
+        <input type="submit" name="form_uniprotIdForm" value="Align By UniProtID">
+    </form>
+    <hr>
+    <h3>ATTACH FASTA FILE</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form_FileUploadForm.as_p }}
+        <input type="submit" name="file" value="Align from File">
+
+    </form>
+</body>
+</html>
