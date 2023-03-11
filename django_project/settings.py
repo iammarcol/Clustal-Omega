@@ -27,9 +27,14 @@ SECRET_KEY = 'django-insecure-8*ru1!ma-b)cg+$^#umaccpu97&agpvv+wrilyc%#6pm&+7kf_
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "https://formacio.bq.ub.edu",    
+    "https://formacio.bq.ub.edu",
     "http://0.0.0.0",
-    "http://localhost"]
+    "http://localhost",
+    "http://u217741:8080",
+    "http://u217741",
+    "u217741"
+    ]
+
 
 # Application definition
 
