@@ -1,0 +1,39 @@
+name: u217741_clustalo
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+    - asgiref
+    - brotlipy
+    - bzip2
+    - ca-certificates
+    - certifi
+    - cffi
+    - charset-normalizer
+    - clustalo
+    - cryptography
+    - django
+    - idna
+    - ld_impl_linux-64
+    - libffi
+    - libuuid
+    - ncurses
+    - openssl
+    - pip
+    - pycparser
+    - pyopenssl
+    - pysocks
+    - python
+    - readline
+    - requests
+    - setuptools
+    - sqlite
+    - sqlparse
+    - tk
+    - tzdata
+    - urllib3
+    - wheel
+    - xz
+    - zlib
+    - uwsgi
