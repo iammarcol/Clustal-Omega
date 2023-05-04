@@ -17,3 +17,8 @@ I also added a simple code written in Java on the error messaging when the wrong
 The code first checks if the input is in the correct format or not and then prints out a message on the screen.
 The page is automatically refreshed and automatically scrolled to the position where the error message is stated.
 
+### Server
+
+The Clustal-Omega application can be found on the following link:
+https://formacio.bq.ub.edu/u217741/clustalo
+
