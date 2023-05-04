@@ -1,4 +1,4 @@
-# Web Development Task
+# Web Development Assignment
 DBW web-site and Clustal Omega web application made in Django (python)
 
 Web application to execute an external program (CLUSTAL-Omega)
